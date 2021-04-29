@@ -117,7 +117,8 @@ public class Regex {
             "\\u0B80-\\u0BFF" +                 // Tamil
             "\\u0C00-\\u0C7F" +                 // Telugu
             "\\u0C80-\\u0CFF" +                 // Kannada
-            "\\u0D00-\\u0D7F";                  // Malayalam
+            "\\u0D00-\\u0D7F" +                 // Malayalam
+            "\\u0900-\\u097F";                  // Hindi
 
     private static final String HASHTAG_ALPHA_NUMERIC_CHARS = "0-9\\uff10-\\uff19_" + HASHTAG_ALPHA_CHARS;
     private static final String HASHTAG_ALPHA = "[" + HASHTAG_ALPHA_CHARS +"]";
