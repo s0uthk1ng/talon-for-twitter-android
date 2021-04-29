@@ -8,6 +8,9 @@ android {
         applicationId buildInfo.id
 
         File secretsExists = new File("secrets.properties")
+        //TGEDIT STARTS
+        secretsExists = rootProject.file('secrets.properties')
+        //TGEDIT ENDS
         if (secretsExists.exists()) {
             def secretsFile = rootProject.file('secrets.properties')
             def secrets = new Properties()

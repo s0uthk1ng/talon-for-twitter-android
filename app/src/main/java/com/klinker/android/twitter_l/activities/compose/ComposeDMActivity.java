@@ -205,7 +205,7 @@ public class ComposeDMActivity extends Compose {
             public void onClick(DialogInterface dialog, int item) {
                 if(item == 0) { // take picture
                     Intent captureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                    File f = new File(Environment.getExternalStorageDirectory() + "/Talon/", "photoToTweet.jpg");
+                    File f = new File(Environment.getExternalStorageDirectory() + "/Pictures/Talon/", "photoToTweet.jpg"); //TODO TGEDIT
 
                     if (!f.exists()) {
                         try {

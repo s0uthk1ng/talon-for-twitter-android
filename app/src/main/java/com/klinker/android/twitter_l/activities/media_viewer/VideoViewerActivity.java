@@ -246,7 +246,7 @@ public class VideoViewerActivity extends DragDismissActivity {
                         Uri uri = IOUtils.saveVideo(context, videoLink);
 
                         String root = Environment.getExternalStorageDirectory().toString();
-                        File myDir = new File(root + "/Talon");
+                        File myDir = new File(root + "/Movies/Talon"); //TODO TGEDIT
                         File file = new File(myDir, uri.getLastPathSegment());
 
                         try {

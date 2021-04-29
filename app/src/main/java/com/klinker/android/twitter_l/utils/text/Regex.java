@@ -113,10 +113,16 @@ public class Regex {
             "\\u3003\\u3005\\u303b" +           // Kanji/Han iteration marks
             "\\uff21-\\uff3a\\uff41-\\uff5a" +  // full width Alphabet
             "\\uff66-\\uff9f" +                 // half width Katakana
-            "\\uffa1-\\uffdc";                  // half width Hangul (Korean)
+            "\\uffa1-\\uffdc" +                 // half width Hangul (Korean)
+            "\\u0B80-\\u0BFF" +                 // Tamil
+            "\\u0C00-\\u0C7F" +                 // Telugu
+            "\\u0C80-\\u0CFF" +                 // Kannada
+            "\\u0D00-\\u0D7F";                  // Malayalam
+
     private static final String HASHTAG_ALPHA_NUMERIC_CHARS = "0-9\\uff10-\\uff19_" + HASHTAG_ALPHA_CHARS;
     private static final String HASHTAG_ALPHA = "[" + HASHTAG_ALPHA_CHARS +"]";
     private static final String HASHTAG_ALPHA_NUMERIC = "[" + HASHTAG_ALPHA_NUMERIC_CHARS +"]";
+
     private static final String HASHTAG_SPACES = "[" + UNICODE_SPACES + "]";
 
     /* URL related hash regex collection */
@@ -250,6 +256,9 @@ public class Regex {
     public static final Pattern VALID_URL = Pattern.compile(VALID_URL_PATTERN_STRING, Pattern.CASE_INSENSITIVE);
     public static final Pattern CASHTAG_PATTERN = Pattern.compile("(" + DOLLAR_SIGN_CHAR + ")(" + CASHTAG + ")" +"(?=$|\\s|\\p{Punct})", Pattern.CASE_INSENSITIVE);
     public static final Pattern MENTION_PATTERN = Pattern.compile("(" + AT_SIGNS + "+)([a-z0-9_]{1,20})(/[a-z][a-z0-9_\\-]{0,24})?", Pattern.CASE_INSENSITIVE);
+    //TODO TGEDIT BEGIN
+    // public static final Pattern HASHTAG_PATTERN = Pattern.compile("(?:^|" + HASHTAG_SPACES + ")" + "(#|\uFF03)(" + HASHTAG_ALPHA_NUMERIC + "*" + HASHTAG_ALPHA + HASHTAG_ALPHA_NUMERIC + "*)", Pattern.CASE_INSENSITIVE);
+    //TODO TGEDIT END
     public static final Pattern HASHTAG_PATTERN = Pattern.compile("(?:^|" + HASHTAG_SPACES + ")" + "(#|\uFF03)(" + HASHTAG_ALPHA_NUMERIC + "*" + HASHTAG_ALPHA + HASHTAG_ALPHA_NUMERIC + "*)", Pattern.CASE_INSENSITIVE);
 
 }

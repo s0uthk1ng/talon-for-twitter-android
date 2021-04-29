@@ -3,8 +3,10 @@
 build/
 *.iml
 Other/Video/
+.gitignore
 .gitignore~
 readme.md~
+readme.md
 local.properties
 **/.DS_STORE
 **/*.mp4
@@ -14,3 +16,4 @@ local.properties
 *~
 .DS_Store
 secrets.properties
+app/build.gradle.orig
